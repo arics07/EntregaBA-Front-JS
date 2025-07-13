@@ -186,8 +186,8 @@ form {
 #img-nosotros img {
   max-width: 100%;
   height: auto;
-  width: 400px; /* o el tamaño que quieras */
-  border-radius: 10px; /* opcional, para que se vea más suave */
+  width: 400px; 
+  border-radius: 10px; 
 }
 
 #nosotros-descripcion {
