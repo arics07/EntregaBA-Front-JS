@@ -52,6 +52,7 @@ let productos = [
 
 ////////////////////////////////////////////////////////////////
 
+/*
 let carrito = [];
 
 // Para agregar un producto al carrito
@@ -103,3 +104,77 @@ mostrarCarrito();
 console.log("--------------------------");
 eliminarProducto(6);
 mostrarCarrito();
+
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const productosDisponibles = [
+    {id: '1', nombre: 'buzo', precio: 65000},
+    {id: '2', nombre: 'remera', precio: 38000},
+    {id: '3', nombre: 'pantalon', precio: 96000},
+    {id: '4', nombre: 'buzo', precio: 54000},
+    {id: '5', nombre: 'remera', precio: 31000}
+  ];
+
+  const contenedorListaProductos = document.getElementById('contenedorListaProductos');
+
+  function renderizarProductos() {
+    //usamos map para transformar cada objeto producto en un string html
+    const productosHtml = productosDisponibles.map(producto => {
+      return `
+                <div class="item-producto">
+                  <h2>${producto.nombre}</h2>
+                  <p>$ ${producto.precio.toFixed(2)}</p>
+                  <button class="btn-agregar-carrito" id="btn-agregar-${producto.id}">Agregar al carrito</button>
+                </div>
+        `;
+    }); 
+
+    //unimos todos los strings HTML y los insertamos en el contenedor
+    contenedorListaProductos.innerHTML = productosHtml.join(''); //join para sacar las comas
+
+    //Una vez que el HTML está en el DOM, podemos seleccionar los botones y adjuntarles los eventos 
+    adjuntarEventosAgregarCarrito();
+  };
+
+  function adjuntarEventosAgregarCarrito(){
+    //recorremos el array original de productos para adjuntar eventos
+    //usamos el id del producto para encontar el botón correspondiente
+    productosDisponibles.forEach(producto => {
+      const boton = document.getElementById(`btn-agregar-${producto.id}`);
+      //me aseguro que el botón exista
+      if (boton) {
+        boton.addEventListener('click', () => {
+          agregarProductoAlCarrito(producto)
+        });
+      }
+    })
+
+  }
+
+  function agregarProductoAlCarrito(productoAAgregar) {
+    let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || []; //si no existe el carrito, va a crear uno vacío
+
+    const indiceProductoExistente = carrito.findIndex(item => item.id === productoAAgregar.id);
+
+    if (indiceProductoExistente !== -1) {
+      carrito[indiceProductoExistente].cantidad++;
+    } else {
+      carrito.push({
+        id: productoAAgregar.id,
+        nombre: productoAAgregar.nombre,
+        precio: productoAAgregar.precio,
+        cantidad: 1
+      });
+    };
+
+    localStorage.setItem('carritoDeCompras', JSON.stringify(carrito));
+    alert(`${productoAAgregar.nombre} agregado al carrito`)
+  }
+
+  renderizarProductos();
+
+  
+
+});

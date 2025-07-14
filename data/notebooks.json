@@ -1,62 +1,50 @@
 [
   {
     "id": 1,
-    "brand": "Dell",
-    "model": "Inspiron 15",
-    "price": 750000,
-    "processor": "Intel Core i5",
+    "marca": "Dell",
+    "modelo": "Inspiron 15",
+    "precio": 750000,
     "ram": "8GB",
-    "storage": "512GB SSD",
     "image": "img/dell-inspiron.jpg"
   },
   {
     "id": 2,
-    "brand": "HP",
-    "model": "Pavilion x360",
-    "price": 830000,
-    "processor": "Intel Core i7",
+    "marca": "HP",
+    "modelo": "Pavilion x360",
+    "precio": 830000,
     "ram": "16GB",
-    "storage": "1TB SSD",
     "image": "img/hp-pavilion.jpg"
   },
   {
     "id": 3,
-    "brand": "Lenovo",
-    "model": "IdeaPad 3",
-    "price": 690000,
-    "processor": "AMD Ryzen 5",
+    "marca": "Lenovo",
+    "modelo": "IdeaPad 3",
+    "precio": 690000,
     "ram": "8GB",
-    "storage": "256GB SSD",
     "image": "img/lenovo-ideapad.jpg"
   },
   {
     "id": 4,
-    "brand": "Asus",
-    "model": "Vivobook 14",
-    "price": 720000,
-    "processor": "Intel Core i3",
+    "marca": "Asus",
+    "modelo": "Vivobook 14",
+    "precio": 720000,
     "ram": "8GB",
-    "storage": "512GB SSD",
     "image": "img/asus-vivobook.jpg"
   },
     {
-    "id": 6,
-    "brand": "Acer",
-    "model": "Aspire 5",
-    "price": 650000,
-    "processor": "Intel Core i5",
+    "id": 5,
+    "marca": "Acer",
+    "modelo": "Aspire 5",
+    "precio": 650000,
     "ram": "8GB",
-    "storage": "512GB SSD",
     "image": "img/acer-aspire.jpg"
   },
   {
-    "id": 5,
-    "brand": "Apple",
-    "model": "MacBook Air M1",
-    "price": 1200000,
-    "processor": "Apple M1",
+    "id": 6,
+    "marca": "Apple",
+    "modelo": "MacBook Air M1",
+    "precio": 1200000,
     "ram": "8GB",
-    "storage": "256GB SSD",
     "image": "img/macbook-air.jpg"
   }
 ]
