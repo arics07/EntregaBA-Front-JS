@@ -313,3 +313,68 @@ form button:hover {
 .btn-agregar-carrito:hover {
   background-color: #218838;
 }
+
+
+/* Carrito */
+.titulo-carrito {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 75px;
+}
+
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.item-carrito {
+  background-color: rgb(239, 236, 195);
+  border: 1px solid #ddd;
+  border-left: 5px solid #007bff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.item-carrito h3 {
+  margin: 0 0 10px;
+}
+
+.item-carrito p {
+  margin: 5px 0;
+}
+
+#btnVaciarCarrito, #btnFinalizarCompra {
+  display: block;
+  margin: 40px auto 0;
+  padding: 10px 20px;
+  background-color: #3540dc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#btnFinalizarCompra:hover {
+  background-color: #39ae1e;
+}
+
+#btnVaciarCarrito:hover {
+  background-color: #c82333;
+}
+
+.imagen-producto {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
